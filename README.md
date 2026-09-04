@@ -238,11 +238,4 @@ docker compose run --rm reranker python eval/evaluate.py
   journal = {arXiv preprint arXiv:1611.09268},
   year    = {2018}
 }
-
-@article{hu2021lora,
-  title   = {LoRA: Low-Rank Adaptation of Large Language Models},
-  author  = {Edward J. Hu and Yelong Shen and Phillip Wallis and Zeyuan Allen-Zhu and Yuanzhi Li and Shean Wang and Lu Wang and Weizhu Chen},
-  journal = {arXiv preprint arXiv:2106.09685},
-  year    = {2021}
-}
 ```
