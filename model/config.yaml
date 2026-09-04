@@ -1,0 +1,25 @@
+# ── Base Model ──────────────────────────────────────────────
+model_name: "Qwen/Qwen2.5-0.5B-Instruct"   # the SLM we fine-tune
+max_length: 256                              # 256 is plenty for MS MARCO and cuts memory by 4x
+
+# ── LoRA Configuration ──────────────────────────────────────
+lora_r: 16              # rank of the low-rank matrices
+lora_alpha: 32           # scaling factor (effective lr multiplier = alpha / r)
+lora_dropout: 0.05       # dropout on LoRA layers to prevent overfitting
+target_modules:          # which weight matrices inside the model get LoRA adapters
+  - q_proj               #   the Query projection in self-attention
+  - v_proj               #   the Value projection in self-attention
+
+# ── Training ────────────────────────────────────────────────
+batch_size: 4            # 4 per pass fits easily within Mac MPS memory
+grad_accumulation: 8     # 4 × 8 = 32 effective batch size
+learning_rate: 0.0002    # float format
+epochs: 1                # 1 epoch finishes in ~45 mins
+
+# ── Data Sizes ──────────────────────────────────────────────
+train_samples: 5000      # 5k samples provides plenty of signal for LoRA
+val_samples: 500         # quick validation check
+eval_samples: 2000       # kept for final evaluation
+
+# ── Output ──────────────────────────────────────────────────
+output_dir: "model/adapter"   # where LoRA adapter weights get saved

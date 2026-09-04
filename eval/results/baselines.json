@@ -1,0 +1,16 @@
+{
+  "eval_source": "MS MARCO v1.1 validation split (natural hard negatives)",
+  "num_queries": 500,
+  "avg_candidates_per_query": 8.3,
+  "baselines": {
+    "BM25": {
+      "MRR@10": 0.4056,
+      "NDCG@10": 0.5462
+    },
+    "BGE-base-en-v1.5": {
+      "MRR@10": 0.5816,
+      "NDCG@10": 0.6817
+    }
+  },
+  "reference": "Nogueira & Cho 2019 (arXiv:1901.04085) \u2014 BERT-large MRR@10 ~0.365 on MS MARCO 1000-candidate"
+}

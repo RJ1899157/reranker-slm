@@ -1,0 +1,21 @@
+services:
+  reranker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: reranker-slm
+    working_dir: /app
+    volumes:
+      # Mount local directory into container so edits & outputs sync in real-time
+      - .:/app
+      # Keep huggingface cache isolated & persistent
+      - hf_cache:/app/.cache
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TRANSFORMERS_CACHE=/app/.cache
+      - HF_HOME=/app/.cache
+    # Default command when running `docker compose up`
+    command: python data/download.py
+
+volumes:
+  hf_cache:

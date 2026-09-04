@@ -1,0 +1,22 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Mac
+.DS_Store
+
+# Data (large datasets)
+data/splits/
+.cache/
+
+# Model weights & Checkpoints (weights kept local / on HF)
+model/adapter/
+model/checkpoints/
+outputs/
+
+# Environment
+.env

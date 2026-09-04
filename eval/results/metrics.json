@@ -1,0 +1,64 @@
+{
+  "train_loss_per_step": [
+    {
+      "step": 25,
+      "epoch": 0.16,
+      "train_loss": 11.399454345703125
+    },
+    {
+      "step": 50,
+      "epoch": 0.32,
+      "train_loss": 7.806849365234375
+    },
+    {
+      "step": 75,
+      "epoch": 0.48,
+      "train_loss": 6.14482421875
+    },
+    {
+      "step": 100,
+      "epoch": 0.64,
+      "train_loss": 5.714902954101563
+    },
+    {
+      "step": 125,
+      "epoch": 0.8,
+      "train_loss": 5.604685668945312
+    },
+    {
+      "step": 150,
+      "epoch": 0.96,
+      "train_loss": 5.55527587890625
+    }
+  ],
+  "val_accuracy_per_epoch": [
+    {
+      "epoch": 1.0,
+      "val_accuracy": 0.58,
+      "val_loss": 0.674491822719574
+    }
+  ],
+  "final_train_loss": 6.95055510891471,
+  "best_val_accuracy": 0.58,
+  "eval_golden": {
+    "num_queries": 500,
+    "reranker_slm": {
+      "MRR@10": 0.4506,
+      "NDCG@10": 0.5794
+    },
+    "baselines": {
+      "BM25": {
+        "MRR@10": 0.4056,
+        "NDCG@10": 0.5462
+      },
+      "BGE-base-en-v1.5": {
+        "MRR@10": 0.5816,
+        "NDCG@10": 0.6817
+      },
+      "BERT-large-ref": {
+        "MRR@10": 0.365,
+        "NDCG@10": "N/A (1000-candidate)"
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+datasets
+transformers
+peft
+trl
+bitsandbytes
+torch
+accelerate
+rank_bm25
+scikit-learn
+pandas
+tqdm
+pyyaml
+sentence-transformers
