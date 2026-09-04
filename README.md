@@ -5,7 +5,6 @@
   <a href="https://pytorch.org"><img src="https://img.shields.io/badge/PyTorch-2.x-EE4C2C.svg" alt="PyTorch 2.x"></a>
   <a href="https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Qwen2.5--0.5B-yellow" alt="Qwen2.5-0.5B"></a>
   <a href="https://github.com/huggingface/peft"><img src="https://img.shields.io/badge/PEFT-LoRA%20%2F%20QLoRA-green" alt="PEFT LoRA"></a>
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
   <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Docker-Ready-2496ED.svg" alt="Docker Ready"></a>
 </p>
 
@@ -247,8 +246,3 @@ docker compose run --rm reranker python eval/evaluate.py
   year    = {2021}
 }
 ```
-
----
-
-## 📄 License
-This project is licensed under the [MIT License](LICENSE).
